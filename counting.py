@@ -1,9 +1,12 @@
 import math
 
 def countingWithDifferences(f, l, d):
+	# Take a list with first number, last number, and the difference between each item in the list
+	# For example 12, 18, 2 would return 4
 	return math.ceil(abs(((l - f + 1)/d)))
 
 def counting(f, l):
+	# Counting the numbers starting at f and ending at l
 	return abs(l - f + 1)
 
 def venn2(a, b, i):
@@ -19,9 +22,11 @@ def factorial(n, p):
 	return factorial(n - 1, p)
 
 def withReplacement(n, r):
+	# Take n and r and return the number of permutations of n with replacement
 	return n ** r
 
 def permutation(t, n):
+	# Take top number in the list and the number of numbers in the list and get the product
 	p = 1
 	l = []
 	for v in range(n):
@@ -31,15 +36,15 @@ def permutation(t, n):
 
 
 def permutate(l):
+	# Called by permutate
 	c = 1
 	for number in l:
 		c *= number
 	return c
 
 
-
-
-
+def choose(x, y):
+	return factorial(x, 1)/(factorial(y, 1) * factorial(x-y, 1))
 
 
 
@@ -50,3 +55,4 @@ print(venn3(31, 42, 37, 13, 9, 12, 4))
 print(factorial(4, 1))
 print(withReplacement(12, 2))
 print(permutation(9, 4))
+print(choose(6, 3))
